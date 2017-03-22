@@ -26,15 +26,16 @@ app.factory('movies', [function() {
   }];
   
   var getMovies = function(){
+    // return movies.slice();//makes a copy of the array
     return movies;
-  }
-
-  var removeMovie = function (index) {
-    movies.splice(index, 1);
   };
+
+  // var removeMovie = function (index) {
+  //   movies.splice(index, 1);
+  // }; - leave the brain work for the controller
   
   return {
     getMovies: getMovies,
-    removeMovie: removeMovie
+    // removeMovie: removeMovie
   } 
 }]);
